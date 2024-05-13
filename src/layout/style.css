@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+.container-layout {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    justify-content: center;
+    position: fixed;
+}
+.header-container {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.outlet-container {
+    min-height: 75vh;
+    width: 95vw;
+    margin: 0 auto;
+}
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+
+}
