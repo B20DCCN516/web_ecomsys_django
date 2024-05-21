@@ -1,0 +1,48 @@
+/* Container for the payment success section */
+.payment-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.icon-container img {
+    width: 70px;
+}
+.icon-container {
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+
+
+.return-home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.return-home-button:hover {
+    background-color: #388e3c;
+}

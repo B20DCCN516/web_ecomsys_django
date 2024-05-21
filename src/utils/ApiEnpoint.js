@@ -13,11 +13,23 @@ const api_endpoint = {
 
     addToCart: 'http://127.0.0.1:8002/api/cart/add_to_cart',
     getCart: 'http://127.0.0.1:8002/api/cart/getCarts?customer_id=',
+    deleteCart: 'http://127.0.0.1:8002/api/cart/delete/',
     
     apiLogin: 'http://127.0.0.1:8001/api/user/login',
     apiRegister: 'http://127.0.0.1:8001/api/user/register',
 
-    apiSearchByName: 'http://127.0.0.1:8009/api/search/searh_by_key?search='
+    apiSearchByName: 'http://127.0.0.1:8009/api/search/searh_by_key?search=',
+
+    apiGetVoucher: 'http://127.0.0.1:8003/api/order/getVouchers',
+
+    apiGetShipment: 'http://127.0.0.1:8006/api/shipment/getShipments',
+
+    apiGetPayment: 'http://127.0.0.1:8005/api/payment/getPayments',
+
+    apiCreateOrder: 'http://127.0.0.1:8003/api/order/create-order',
+    apiGetOrder: 'http://127.0.0.1:8003/api/order/getOrders',
+
+    apiGetOrderDetail: 'http://127.0.0.1:8003/api/order/getOrderDetail?order_id='
 
 }
 

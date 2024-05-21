@@ -1,0 +1,11 @@
+.ship-inf {
+    min-width: 40%;
+}
+.ship-des {
+    margin-left: 15px;
+}
+.ship-price {
+    color: #e74c3c;
+    font-weight: 500;
+    font-size: 17px;
+}

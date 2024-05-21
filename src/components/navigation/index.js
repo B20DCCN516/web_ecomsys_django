@@ -12,8 +12,8 @@ function Navigation() {
                         <Link to={`/`}>Trang chủ</Link>
                     </li>
                     <li><Link to={`/cart`}>Giỏ hàng</Link></li>
-                    <li><Link to={`/`}>Thông tin</Link></li>
-                    <li><Link to={`/manager`}>Quản lý</Link></li>
+                    <li><Link to={`/my-order`}>Đơn hàng</Link></li>
+                    <li><Link to={`/profile`}>Thông tin</Link></li>
                 </ul>
             </nav>
         </div>

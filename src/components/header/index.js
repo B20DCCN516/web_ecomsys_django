@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import avt from '../../images/avt.png'
 import './style.css'
 import { Menu, Dropdown } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { getUser } from '../../utils/Utils';
 function Header() {
     const [user, setUser] = useState({})
 
@@ -13,7 +14,15 @@ function Header() {
     }
 
     useEffect(() => {
+        const currentUser = getUser()
+        if(currentUser != null) {
+            console.log(currentUser)
+            setUser(currentUser)
+            return
+        }
+        
         const handleLogin = (event) => {
+            console.log('header')
             setUser(event.detail.user);
             sessionStorage.setItem("user",JSON.stringify(event.detail.user))
         };
@@ -33,7 +42,10 @@ function Header() {
     const menu = (
         <Menu>
             <Menu.Item key="1">
-                Thông tin cá nhân
+                <Link to={'/profile'}>
+                    Thông tin cá nhân
+                </Link>
+                
             </Menu.Item>
             <Menu.Item key="2">
                 <a href="/logout">Lịch sử</a>
@@ -46,7 +58,10 @@ function Header() {
 
     return (
         <div className="component-header-container">
-            <h2>Ecomsys</h2>
+            <Link to={`/`}>
+                <h2 style={{'color': 'white'}}>Ecomsys</h2>
+            </Link>
+            
             <div className="inf-user">
                 {
                     user?.id ? (

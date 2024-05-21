@@ -22,6 +22,7 @@ function Register() {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 if (data['status'] === 1) {
                     alert('Đăng ký thành công!')
                     navi(`/login`)
@@ -54,9 +55,21 @@ function Register() {
                     />
                 </div>
                 <div class="input-group">
-                    <label for="email">Andress:</label>
+                    <label for="email">Num house:</label>
                     <input type="text" id="address" name="address" required
-                    onChange={(e) => setUser({...user,address: e.target.value})}
+                    onChange={(e) => setUser({...user,numHouse: e.target.value})}
+                    />
+                </div>
+                <div class="input-group">
+                    <label for="email">Street:</label>
+                    <input type="text" id="address" name="address" required
+                    onChange={(e) => setUser({...user,street: e.target.value})}
+                    />
+                </div>
+                <div class="input-group">
+                    <label for="email">Address detail:</label>
+                    <input type="text" id="address" name="address" required
+                    onChange={(e) => setUser({...user,detail: e.target.value})}
                     />
                 </div>
                 <div class="input-group">

@@ -24,9 +24,11 @@ function Login() {
             .then(data => {
                 console.log(data)
                 if (data['status'] === 1) {
-                    alert('Đăng nhập thành công!')
                     window.dispatchEvent(new CustomEvent('user-login', { detail: { user: data["customer"] } }));
-                    navi(`/`)
+                    alert('Đăng nhập thành công!')
+                    setTimeout(() => {
+                        navi(`/`)
+                     },300);
                 } else {
                     alert('Tài khoản hoặc mật khẩu không chính xác!')
                 }
